@@ -1,18 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    app:layoutDescription="@xml/activity_main_scene2">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:contentDescription="TODO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="402dp"
+        android:layout_height="393dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/keops_piramidi_khufu_piramidi_ya_da_b_y_k_piramit_g_n_m_zde_m_s_r_n_ba_kenti_kahire_nin_bir_par_as_olan_gize_yi_evreleyen_antik_gize_mezar_kenti_nde_bulunan_an_tsal_piramitten_en_eski_ve_en_b_y_k_olan_d_r_m_2551_2560_y_llar_civar_nda_yap_ld_san_lan_bu_an_tsal_kompleks_d_nyan_n_yedi_harikas_ndan_biri_olup_bu_yedi_harika_i_inde_g_n_m_ze_kadar_ula_an_tek_eserdir_bu_piramidin_m_s_r_firavunu_khufu_ad_na_bir_an_tsal_mezar_olarak_in_a_edildi_ine_inan_l_r_ve_yap_m_n_n_yakla_k_yirmi_y_l_s_rd_san_lmaktad_r_20_y_zy_l_ba_lar_na_dek_yani_3800_y_l_boyunca_hacmi_ve_k_tlesi_bak_m_ndan_d_nya_daki_en_b_y_k_yapay_insan_yap_m_yap_olarak_kabul_edilmi_1_ve_y_kseklik_rekoru_4000_y_l_boyunca_k_r_lamam_t_r_not_1_b_y_k_piramidin_orijinal_halinde_d_k_sm_ta_levhalarla_kapl_yd_g_n_m_zde_bu_kaplama_tabakas_mevcut_de_ildir_b_y_k_piramit_in_in_a_tekni_i_hakk_nda_g_n_m_zde_ok_e_itli_varsay_mlar_bulunmaktad_r_n_a_tekni_i_hakk_ndaki_varsay_mlardan_birine_g_re_yap_lan_spiral_bir_rampadan_kar_lan_ta_bloklar_st_ste_konuyordu_rampa_amur_kaplan_yor_sulan_yor_ve_ta_bloklar_itilerek_kayd_r_labiliyordu_bir_ba_ka_varsay_ma_g_re_ta_bloklar_dev_manivelalarla_kald_r_l_yordu_b_y_k_piramit_in_i_inde_oda_saptanabilmi_tir_bunlardan_yap_n_n_en_alt_ndaki_oda_muhtemelen_bitirilmemi_haldeki_piramidin_zerine_in_a_edildi_i_temel_kayas_n_n_oyulmas_yla_olu_turulmu_odad_r_sonradan_kral_odas_ve_krali_e_odas_adlar_yak_t_r_lan_2_odalar_ise_piramidal_yap_n_n_st_k_sm_nda_yer_al_rlar_b_y_k_piramit_asl_nda_iki_tap_naktan_bu_iki_tap_na_birbirlerine_ba_layan_bir_yoldan_piramit_evresindeki_mastaba_ad_verilen_e_itli_k_k_mezarlardan_ve_piramitlerden_olu_an_bir_yap_lar_kompleksinin_bir_par_as_d_r_m_s_r_n_eski_mparatorluk_d_neminden_kald_san_lan_bu_ta_eser_do_a_ko_ullar_n_n_y_prat_c_etkilerine_binlerce_y_l_kar_koyabilmi_olup_gizemleri_bir_bir_ortaya_kar_lmakla_birlikte_hen_z_tam_olarak_anla_lamam_dev_bir_eser_olarak_varl_n_s_rd_rmektedir" />
+        </LinearLayout>
+    </ScrollView>
 
     <TextView
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/keops_piramidi"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+</androidx.constraintlayout.motion.widget.MotionLayout>
